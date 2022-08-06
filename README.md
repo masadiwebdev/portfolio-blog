@@ -1,2 +1,2 @@
 # portfolio
-My portfolio anda web blog atakana.com
+My portfolio and web blog atakana.com
