@@ -1,0 +1,31 @@
+Options All -Indexes
+RewriteEngine on
+#php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#add
+RewriteRule ^pg/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ data.php?add=$1&key=$2
+RewriteRule ^pg/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ data.php?add=$1&key=$2&val=$3
+#akun
+RewriteRule ^akses/([a-zA-Z0-9_-]+)$ akun.php?acc=$1
+RewriteRule ^akses/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ akun.php?acc=$1&x=$2
+#keluar
+RewriteRule ^tutup/([a-zA-Z0-9_-]+)$ keluar.php?tutup=$1
+RewriteRule ^tutup/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ keluar.php?tutup=$1&x=$2
+#dashboard
+RewriteRule ^kelola/([a-zA-Z0-9_-]+)$ dashboard.php?set=$1
+RewriteRule ^kelola/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ dashboard.php?set=$1&slug=$2
+#artikel
+RewriteRule ^artikel/([a-zA-Z0-9_-]+)$ konsumsi.php?publik=$1
+RewriteRule ^artikel/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ konsumsi.php?publik=$1&p=$2
+RewriteRule ^artikel/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ konsumsi.php?publik=$1&p=$2&key=$3
+#upload gambar
+RewriteRule ^files/([a-zA-Z0-9_-]+)$ upart.php?pegim=$1
+RewriteRule ^files/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ upart.php?pegim=$1&file=$2
+#preview
+RewriteRule ^p/a/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ preview.php?s=$1&e=$2
+#Report
+RewriteRule ^rpr/([a-zA-Z0-9_-]+)$ report.php?rpr=$1
+#Sitemap
+RewriteRule ^sitemap\.xml/?$ sitemap.php
