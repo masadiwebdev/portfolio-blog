@@ -64,7 +64,7 @@ function synter()
 		cd = cd.replace(/--&gt;/g, '--&gt;'.fontcolor('gray')),
 		cd = cd.replace(/&lt;\s/g, '&lt; '.fontcolor('crimson')),
 		cd = cd.replace(/&lt;([a-z0-9\/]+)&gt;/g, '&lt;$1&gt;'.fontcolor('crimson')),
-cd = cd.replace(/&lt;(.[a-zA-Z0-9]+)/g, '&lt;$1'.fontcolor('crimson')),
+		cd = cd.replace(/&lt;(.[a-zA-Z0-9]+)/g, '&lt;$1'.fontcolor('crimson')),
 		cd = cd.replace(/&lt;([a-zA-Z0-9]+)/g, '&lt;$1'.fontcolor('crimson')),
 		cd = cd.replace(/\/&gt;/g, '/&gt;'.fontcolor('crimson')),
 		cd = cd.replace(/\&gt;/g, '&gt;'.fontcolor('crimson')),
@@ -95,8 +95,8 @@ cd = cd.replace(/&lt;(.[a-zA-Z0-9]+)/g, '&lt;$1'.fontcolor('crimson')),
 		cd = cd.replace(/\s\=\s/g, ' = '.fontcolor('greenyellow')),
 		cd = cd.replace(/\s\==\s/g, ' == '.fontcolor('greenyellow')),
 		cd = cd.replace(/\s\===\s/g, ' === '.fontcolor('greenyellow')),
-cd = cd.replace(/\n(.*?)\:/g, '\n'+'$1'.fontcolor('tan')+ ': '),
-cd = cd.replace(/\:(.*?)\;/g, ':'+'$1'.fontcolor('tan')+';'),
+		cd = cd.replace(/\n(.*?)\:/g, '\n'+'$1'.fontcolor('tan')+ ': '),
+		cd = cd.replace(/\:(.*?)\;/g, ':'+'$1'.fontcolor('tan')+';'),
 		c[i].innerHTML = cd;
 	}
 }
